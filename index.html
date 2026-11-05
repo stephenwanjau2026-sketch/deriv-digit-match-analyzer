@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deriv Digit Match Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>DERIV DIGIT MATCH ANALYZER</h1>
+    <p>Volatility Markets • Live Tick Analysis</p>
+    <span id="connection">Connecting...</span>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Market Selection</h2>
+      <select id="market">
+        <option value="all">All Volatility Indices</option>
+      </select>
+      <button id="connect">Connect to Deriv</button>
+    </section>
+
+    <section class="panel">
+      <h2>Digit Match Analysis</h2>
+      <div class="stats">
+        <div><small>Last Digit</small><strong id="lastDigit">-</strong></div>
+        <div><small>Total Ticks</small><strong id="totalTicks">0</strong></div>
+        <div><small>Match Digit</small><strong id="matchDigit">-</strong></div>
+      </div>
+      <h3>Digit Frequencies</h3>
+      <div id="digitStats"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Recent Tick History</h2>
+      <div id="history">Waiting for market data...</div>
+    </section>
+
+    <section class="panel">
+      <h2>Trade Settings</h2>
+      <label>Match Digit (0-9)</label>
+      <input id="tradeDigit" type="number" min="0" max="9" value="5">
+      <label>Stake</label>
+      <input id="stake" type="number" min="0.35" step="0.01" value="1">
+      <label>Account Mode</label>
+      <select id="accountMode">
+        <option value="demo">Demo Account</option>
+        <option value="real">Real Account</option>
+      </select>
+      <button id="tradeButton">Prepare Digit Match Trade</button>
+      <p id="tradeStatus">No trade submitted.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Important Risk Notice</h2>
+      <p>Digit Match analysis is statistical and cannot predict the next digit with certainty. Test on a demo account first. Never risk money you cannot afford to lose.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
