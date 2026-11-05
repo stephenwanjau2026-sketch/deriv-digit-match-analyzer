@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101827;
+  color: white;
+}
+
+.topbar {
+  background: #07111f;
+  padding: 25px 15px;
+  text-align: center;
+  border-bottom: 2px solid #16c784;
+}
+
+.topbar h1 {
+  color: #16c784;
+  font-size: 23px;
+}
+
+.topbar p {
+  color: #b8c5d6;
+}
+
+#connection {
+  color: #16c784;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 15px;
+}
+
+.panel {
+  background: #1b293b;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+  border: 1px solid #34465d;
+}
+
+h2 {
+  color: #16c784;
+}
+
+select, input {
+  width: 100%;
+  padding: 13px;
+  margin: 10px 0;
+  border-radius: 7px;
+  border: 1px solid #52647b;
+  background: #101827;
+  color: white;
+}
+
+button {
+  background: #16c784;
+  color: #07111f;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.stats div {
+  background: #101827;
+  padding: 15px 5px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.stats small {
+  display: block;
+  color: #aab8ca;
+}
+
+.stats strong {
+  display: block;
+  font-size: 25px;
+  color: #16c784;
+  margin-top: 8px;
+}
+
+#digitStats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+#digitStats div {
+  background: #101827;
+  padding: 12px 5px;
+  text-align: center;
+  border-radius: 7px;
+}
+
+#history {
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+
+@media(max-width: 450px) {
+  .topbar h1 {
+    font-size: 19px;
+  }
+  }
